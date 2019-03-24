@@ -8,8 +8,11 @@ After a party, some of the guests began to take cabs home.This robot can recogni
 
 ### Task splitting
 pose recognization
+
 luggage identification
+
 Manipulator Control
+
 SLAM
 
 ### Pose recognization
