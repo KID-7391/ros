@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(sound_EXPORTED_TARGETS "sound_generate_messages_cpp;sound_generate_messages_eus;sound_generate_messages_lisp;sound_generate_messages_nodejs;sound_generate_messages_py")
+set(sound_EXPORTED_TARGETS "")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${sound_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -189,7 +189,7 @@ foreach(depend ${depends})
   list(APPEND sound_EXPORTED_TARGETS ${${sound_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "sound-msg-extras.cmake")
+set(pkg_cfg_extras "")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${sound_DIR}/${extra})

@@ -66,6 +66,18 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -76,28 +88,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -110,6 +100,28 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -120,18 +132,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -165,480 +165,6 @@ depend:
 	cd /home/wen/rse/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-sound/CMakeFiles/sound_publisher.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_publisher.dir/rule
-.PHONY : sound/CMakeFiles/sound_publisher.dir/rule
-
-# Convenience name for target.
-sound_publisher: sound/CMakeFiles/sound_publisher.dir/rule
-
-.PHONY : sound_publisher
-
-# fast build rule for target.
-sound_publisher/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_publisher.dir/build.make sound/CMakeFiles/sound_publisher.dir/build
-.PHONY : sound_publisher/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_generate_messages_py.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_generate_messages_py.dir/rule
-.PHONY : sound/CMakeFiles/sound_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sound_generate_messages_py: sound/CMakeFiles/sound_generate_messages_py.dir/rule
-
-.PHONY : sound_generate_messages_py
-
-# fast build rule for target.
-sound_generate_messages_py/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_generate_messages_py.dir/build.make sound/CMakeFiles/sound_generate_messages_py.dir/build
-.PHONY : sound_generate_messages_py/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_gennodejs.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_gennodejs.dir/rule
-.PHONY : sound/CMakeFiles/sound_gennodejs.dir/rule
-
-# Convenience name for target.
-sound_gennodejs: sound/CMakeFiles/sound_gennodejs.dir/rule
-
-.PHONY : sound_gennodejs
-
-# fast build rule for target.
-sound_gennodejs/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_gennodejs.dir/build.make sound/CMakeFiles/sound_gennodejs.dir/build
-.PHONY : sound_gennodejs/fast
-
-# Convenience name for target.
-sound/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : sound/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: sound/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/std_msgs_generate_messages_py.dir/build.make sound/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-sound/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : sound/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: sound/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/roscpp_generate_messages_py.dir/build.make sound/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_genpy.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_genpy.dir/rule
-.PHONY : sound/CMakeFiles/sound_genpy.dir/rule
-
-# Convenience name for target.
-sound_genpy: sound/CMakeFiles/sound_genpy.dir/rule
-
-.PHONY : sound_genpy
-
-# fast build rule for target.
-sound_genpy/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_genpy.dir/build.make sound/CMakeFiles/sound_genpy.dir/build
-.PHONY : sound_genpy/fast
-
-# Convenience name for target.
-sound/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : sound/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: sound/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make sound/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_subscriber.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_subscriber.dir/rule
-.PHONY : sound/CMakeFiles/sound_subscriber.dir/rule
-
-# Convenience name for target.
-sound_subscriber: sound/CMakeFiles/sound_subscriber.dir/rule
-
-.PHONY : sound_subscriber
-
-# fast build rule for target.
-sound_subscriber/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_subscriber.dir/build.make sound/CMakeFiles/sound_subscriber.dir/build
-.PHONY : sound_subscriber/fast
-
-# Convenience name for target.
-sound/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : sound/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: sound/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make sound/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : sound/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: sound/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make sound/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : sound/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: sound/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make sound/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : sound/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: sound/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/roscpp_generate_messages_eus.dir/build.make sound/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-sound/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : sound/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: sound/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make sound/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-sound/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : sound/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: sound/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make sound/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : sound/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: sound/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make sound/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_geneus.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_geneus.dir/rule
-.PHONY : sound/CMakeFiles/sound_geneus.dir/rule
-
-# Convenience name for target.
-sound_geneus: sound/CMakeFiles/sound_geneus.dir/rule
-
-.PHONY : sound_geneus
-
-# fast build rule for target.
-sound_geneus/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_geneus.dir/build.make sound/CMakeFiles/sound_geneus.dir/build
-.PHONY : sound_geneus/fast
-
-# Convenience name for target.
-sound/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : sound/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: sound/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make sound/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_generate_messages.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_generate_messages.dir/rule
-.PHONY : sound/CMakeFiles/sound_generate_messages.dir/rule
-
-# Convenience name for target.
-sound_generate_messages: sound/CMakeFiles/sound_generate_messages.dir/rule
-
-.PHONY : sound_generate_messages
-
-# fast build rule for target.
-sound_generate_messages/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_generate_messages.dir/build.make sound/CMakeFiles/sound_generate_messages.dir/build
-.PHONY : sound_generate_messages/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_generate_messages_cpp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_generate_messages_cpp.dir/rule
-.PHONY : sound/CMakeFiles/sound_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sound_generate_messages_cpp: sound/CMakeFiles/sound_generate_messages_cpp.dir/rule
-
-.PHONY : sound_generate_messages_cpp
-
-# fast build rule for target.
-sound_generate_messages_cpp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_generate_messages_cpp.dir/build.make sound/CMakeFiles/sound_generate_messages_cpp.dir/build
-.PHONY : sound_generate_messages_cpp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : sound/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: sound/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make sound/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : sound/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: sound/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make sound/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-sound/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : sound/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: sound/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make sound/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_gencpp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_gencpp.dir/rule
-.PHONY : sound/CMakeFiles/sound_gencpp.dir/rule
-
-# Convenience name for target.
-sound_gencpp: sound/CMakeFiles/sound_gencpp.dir/rule
-
-.PHONY : sound_gencpp
-
-# fast build rule for target.
-sound_gencpp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_gencpp.dir/build.make sound/CMakeFiles/sound_gencpp.dir/build
-.PHONY : sound_gencpp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : sound/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: sound/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make sound/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_generate_messages_eus.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_generate_messages_eus.dir/rule
-.PHONY : sound/CMakeFiles/sound_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sound_generate_messages_eus: sound/CMakeFiles/sound_generate_messages_eus.dir/rule
-
-.PHONY : sound_generate_messages_eus
-
-# fast build rule for target.
-sound_generate_messages_eus/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_generate_messages_eus.dir/build.make sound/CMakeFiles/sound_generate_messages_eus.dir/build
-.PHONY : sound_generate_messages_eus/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_generate_messages_lisp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_generate_messages_lisp.dir/rule
-.PHONY : sound/CMakeFiles/sound_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sound_generate_messages_lisp: sound/CMakeFiles/sound_generate_messages_lisp.dir/rule
-
-.PHONY : sound_generate_messages_lisp
-
-# fast build rule for target.
-sound_generate_messages_lisp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_generate_messages_lisp.dir/build.make sound/CMakeFiles/sound_generate_messages_lisp.dir/build
-.PHONY : sound_generate_messages_lisp/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_generate_messages_nodejs.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_generate_messages_nodejs.dir/rule
-.PHONY : sound/CMakeFiles/sound_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sound_generate_messages_nodejs: sound/CMakeFiles/sound_generate_messages_nodejs.dir/rule
-
-.PHONY : sound_generate_messages_nodejs
-
-# fast build rule for target.
-sound_generate_messages_nodejs/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_generate_messages_nodejs.dir/build.make sound/CMakeFiles/sound_generate_messages_nodejs.dir/build
-.PHONY : sound_generate_messages_nodejs/fast
-
-# Convenience name for target.
-sound/CMakeFiles/sound_genlisp.dir/rule:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 sound/CMakeFiles/sound_genlisp.dir/rule
-.PHONY : sound/CMakeFiles/sound_genlisp.dir/rule
-
-# Convenience name for target.
-sound_genlisp: sound/CMakeFiles/sound_genlisp.dir/rule
-
-.PHONY : sound_genlisp
-
-# fast build rule for target.
-sound_genlisp/fast:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_genlisp.dir/build.make sound/CMakeFiles/sound_genlisp.dir/build
-.PHONY : sound_genlisp/fast
-
-src/sound_publisher.o: src/sound_publisher.cpp.o
-
-.PHONY : src/sound_publisher.o
-
-# target to build an object file
-src/sound_publisher.cpp.o:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_publisher.dir/build.make sound/CMakeFiles/sound_publisher.dir/src/sound_publisher.cpp.o
-.PHONY : src/sound_publisher.cpp.o
-
-src/sound_publisher.i: src/sound_publisher.cpp.i
-
-.PHONY : src/sound_publisher.i
-
-# target to preprocess a source file
-src/sound_publisher.cpp.i:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_publisher.dir/build.make sound/CMakeFiles/sound_publisher.dir/src/sound_publisher.cpp.i
-.PHONY : src/sound_publisher.cpp.i
-
-src/sound_publisher.s: src/sound_publisher.cpp.s
-
-.PHONY : src/sound_publisher.s
-
-# target to generate assembly for a file
-src/sound_publisher.cpp.s:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_publisher.dir/build.make sound/CMakeFiles/sound_publisher.dir/src/sound_publisher.cpp.s
-.PHONY : src/sound_publisher.cpp.s
-
-src/sound_subscriber.o: src/sound_subscriber.cpp.o
-
-.PHONY : src/sound_subscriber.o
-
-# target to build an object file
-src/sound_subscriber.cpp.o:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_subscriber.dir/build.make sound/CMakeFiles/sound_subscriber.dir/src/sound_subscriber.cpp.o
-.PHONY : src/sound_subscriber.cpp.o
-
-src/sound_subscriber.i: src/sound_subscriber.cpp.i
-
-.PHONY : src/sound_subscriber.i
-
-# target to preprocess a source file
-src/sound_subscriber.cpp.i:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_subscriber.dir/build.make sound/CMakeFiles/sound_subscriber.dir/src/sound_subscriber.cpp.i
-.PHONY : src/sound_subscriber.cpp.i
-
-src/sound_subscriber.s: src/sound_subscriber.cpp.s
-
-.PHONY : src/sound_subscriber.s
-
-# target to generate assembly for a file
-src/sound_subscriber.cpp.s:
-	cd /home/wen/rse/catkin_ws/build && $(MAKE) -f sound/CMakeFiles/sound_subscriber.dir/build.make sound/CMakeFiles/sound_subscriber.dir/src/sound_subscriber.cpp.s
-.PHONY : src/sound_subscriber.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -646,46 +172,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... sound_publisher"
-	@echo "... edit_cache"
-	@echo "... sound_generate_messages_py"
-	@echo "... sound_gennodejs"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... sound_genpy"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... sound_subscriber"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... sound_geneus"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... sound_generate_messages"
-	@echo "... sound_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... sound_gencpp"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... sound_generate_messages_eus"
-	@echo "... sound_generate_messages_lisp"
 	@echo "... install"
-	@echo "... sound_generate_messages_nodejs"
-	@echo "... sound_genlisp"
-	@echo "... src/sound_publisher.o"
-	@echo "... src/sound_publisher.i"
-	@echo "... src/sound_publisher.s"
-	@echo "... src/sound_subscriber.o"
-	@echo "... src/sound_subscriber.i"
-	@echo "... src/sound_subscriber.s"
+	@echo "... rebuild_cache"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... test"
+	@echo "... edit_cache"
 .PHONY : help
 
 

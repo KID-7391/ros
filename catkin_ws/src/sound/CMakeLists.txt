@@ -7,17 +7,7 @@ project(sound)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  std_msgs
-  message_generation
-)
-
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
-
+find_package(catkin REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -122,9 +112,8 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-  include
-  ${catkin_INCLUDE_DIRS}
-  #/opt/ros/kinetic/include
+# include
+# ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -204,10 +193,3 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
-
-add_executable(sound_publisher src/sound_publisher.cpp)
-target_link_libraries(sound_publisher ${catkin_LIBRARIES})
-
-add_executable(sound_subscriber src/sound_subscriber.cpp)
-target_link_libraries(sound_subscriber ${catkin_LIBRARIES})

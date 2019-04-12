@@ -1,0 +1,8 @@
+prefix=/home/wen/rse/catkin_ws/devel
+
+Name: face_count
+Description: Description of face_count
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wen/rse/catkin_ws/devel/lib 
+Requires: 
