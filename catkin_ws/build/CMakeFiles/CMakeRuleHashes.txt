@@ -1,4 +1,5 @@
 # Hashes of file build rules.
+b00b15b7b0fe587b1ce59ba5e7130327 /home/wen/rse/catkin_ws/devel/include/beginner_tutorials/AddTwoInts.h
 35ee676f0320db839bb71712c1c4eebd /home/wen/rse/catkin_ws/devel/include/create_node/BatteryState.h
 9da177f82f773b6b8da69d0a9d1c1b0d /home/wen/rse/catkin_ws/devel/include/create_node/Drive.h
 e0f749649ce1a5b5cf24c2a0b149f35e /home/wen/rse/catkin_ws/devel/include/create_node/RawTurtlebotSensorState.h
@@ -27,6 +28,8 @@ f3bca0f206715526e9473e1edb51b3ef /home/wen/rse/catkin_ws/devel/include/turtlebot
 eb7e80ff0f1777e4bc2dea29c3549220 /home/wen/rse/catkin_ws/devel/include/turtlebot_msgs/PanoramaImg.h
 28c288725f6011ab6eca9eff5f92d2e0 /home/wen/rse/catkin_ws/devel/include/turtlebot_msgs/SetFollowState.h
 739c00345c40119420f2fe490f873ccb /home/wen/rse/catkin_ws/devel/include/turtlebot_msgs/TakePanorama.h
+589f52f11bd0ca81db3c5f905a7151a2 /home/wen/rse/catkin_ws/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/_AddTwoInts.py
+2a6140f2510a7708b396e4ec0bf56f19 /home/wen/rse/catkin_ws/devel/lib/python2.7/dist-packages/beginner_tutorials/srv/__init__.py
 41c5a105ed0982df588166cd44e0a8b9 /home/wen/rse/catkin_ws/devel/lib/python2.7/dist-packages/create_node/msg/_BatteryState.py
 501efb87391e11d147613b657ec8b8f6 /home/wen/rse/catkin_ws/devel/lib/python2.7/dist-packages/create_node/msg/_Drive.py
 894eaeebde9e5570eb233d7ab1968de3 /home/wen/rse/catkin_ws/devel/lib/python2.7/dist-packages/create_node/msg/_RawTurtlebotSensorState.py
@@ -59,6 +62,7 @@ e074ddecda4ca77af093d2fa24684876 /home/wen/rse/catkin_ws/devel/lib/python2.7/dis
 71a580cf6e6dfc4c973b0e523296938e /home/wen/rse/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot_msgs/srv/_SetFollowState.py
 c7345a99027452d0e5ac5acca62ae30f /home/wen/rse/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot_msgs/srv/_TakePanorama.py
 13e6f21f229418524b4e94635aefe44b /home/wen/rse/catkin_ws/devel/lib/python2.7/dist-packages/turtlebot_msgs/srv/__init__.py
+008e2cee941d3eb3ccfca9d865eced1d /home/wen/rse/catkin_ws/devel/share/common-lisp/ros/beginner_tutorials/srv/AddTwoInts.lisp
 b70b53cdaff065f5d03847e5dd030959 /home/wen/rse/catkin_ws/devel/share/common-lisp/ros/create_node/msg/BatteryState.lisp
 497df030a688c5252413c6cca863875f /home/wen/rse/catkin_ws/devel/share/common-lisp/ros/create_node/msg/Drive.lisp
 a0b7ed8b9f014f67f1dbdacb56a6c7db /home/wen/rse/catkin_ws/devel/share/common-lisp/ros/create_node/msg/RawTurtlebotSensorState.lisp
@@ -85,6 +89,7 @@ ae6eac10fb03c1d49ffba04f2f39ac3c /home/wen/rse/catkin_ws/devel/share/common-lisp
 615d873026f1b6b418e9f7391c98fa3b /home/wen/rse/catkin_ws/devel/share/common-lisp/ros/turtlebot_msgs/msg/PanoramaImg.lisp
 2262245ae840fbadd9ffbe288c989b60 /home/wen/rse/catkin_ws/devel/share/common-lisp/ros/turtlebot_msgs/srv/SetFollowState.lisp
 d424e4f32ecf4d2baab97930e9efe64f /home/wen/rse/catkin_ws/devel/share/common-lisp/ros/turtlebot_msgs/srv/TakePanorama.lisp
+6bd2e27385aa822ac50c61d573c8e0ae /home/wen/rse/catkin_ws/devel/share/gennodejs/ros/beginner_tutorials/srv/AddTwoInts.js
 719de7a50db08ea0586b057ac662d52b /home/wen/rse/catkin_ws/devel/share/gennodejs/ros/create_node/msg/BatteryState.js
 d7d50752a641636c4ff9856e4691a3c2 /home/wen/rse/catkin_ws/devel/share/gennodejs/ros/create_node/msg/Drive.js
 b254349437cec138b079a6cc59e2bbfd /home/wen/rse/catkin_ws/devel/share/gennodejs/ros/create_node/msg/RawTurtlebotSensorState.js
@@ -111,6 +116,8 @@ fd655118d6b2368e55d2844eb81d00aa /home/wen/rse/catkin_ws/devel/share/gennodejs/r
 6bf0cf6470d091f403761a0a96d130b6 /home/wen/rse/catkin_ws/devel/share/gennodejs/ros/turtlebot_msgs/msg/PanoramaImg.js
 3d7876a9c419c5185d03f1becad947af /home/wen/rse/catkin_ws/devel/share/gennodejs/ros/turtlebot_msgs/srv/SetFollowState.js
 15f8b9503f205bc56a90bb829d754772 /home/wen/rse/catkin_ws/devel/share/gennodejs/ros/turtlebot_msgs/srv/TakePanorama.js
+47b190e9be1ce21032828817b33e2858 /home/wen/rse/catkin_ws/devel/share/roseus/ros/beginner_tutorials/manifest.l
+d4a0713c3f998171e6d44641714755f2 /home/wen/rse/catkin_ws/devel/share/roseus/ros/beginner_tutorials/srv/AddTwoInts.l
 b6bb3e3e19fceb891e253746c7ecbd7f /home/wen/rse/catkin_ws/devel/share/roseus/ros/create_node/manifest.l
 46f2e642591758eee6b0cbacd47025a7 /home/wen/rse/catkin_ws/devel/share/roseus/ros/create_node/msg/BatteryState.l
 205d8ea5d90358faff2ae52dc793734d /home/wen/rse/catkin_ws/devel/share/roseus/ros/create_node/msg/Drive.l
@@ -120,6 +127,7 @@ ee6b2f2ef22b251f11114813f704f64c /home/wen/rse/catkin_ws/devel/share/roseus/ros/
 23caa3d9bbe0254607d6b2c9e5c68478 /home/wen/rse/catkin_ws/devel/share/roseus/ros/create_node/msg/TurtlebotSensorState.l
 26077103daf1424d33c30d2ba7605f36 /home/wen/rse/catkin_ws/devel/share/roseus/ros/create_node/srv/SetDigitalOutputs.l
 0c290213d7eb5453c1be81b06292ee8c /home/wen/rse/catkin_ws/devel/share/roseus/ros/create_node/srv/SetTurtlebotMode.l
+8a56bb6305455ed5bec6b198f3083535 /home/wen/rse/catkin_ws/devel/share/roseus/ros/sound/manifest.l
 84a1be6db3586d073d87ac02447b7a77 /home/wen/rse/catkin_ws/devel/share/roseus/ros/turtlebot_actions/manifest.l
 cb0b17c41fc68291f4d2f7c889adca29 /home/wen/rse/catkin_ws/devel/share/roseus/ros/turtlebot_actions/msg/FindFiducialAction.l
 9857b2e1787a94a4af078ac2280aa9d3 /home/wen/rse/catkin_ws/devel/share/roseus/ros/turtlebot_actions/msg/FindFiducialActionFeedback.l
@@ -141,7 +149,15 @@ f1549a438762da5e883ddba18231e5b8 /home/wen/rse/catkin_ws/devel/share/roseus/ros/
 e781b02704208c5241b894b4a314cbbd /home/wen/rse/catkin_ws/devel/share/roseus/ros/turtlebot_msgs/msg/PanoramaImg.l
 011cee59cecfccc7facd631d85c13d8e /home/wen/rse/catkin_ws/devel/share/roseus/ros/turtlebot_msgs/srv/SetFollowState.l
 40b895a89121bb22958346297962a743 /home/wen/rse/catkin_ws/devel/share/roseus/ros/turtlebot_msgs/srv/TakePanorama.l
+23dcd301b1bb569a6fff3642e54dbaf7 /home/wen/rse/catkin_ws/devel/share/roseus/ros/xfei_asr/manifest.l
 a32ed22cb6b2ecbcc38d6b9faebf4f3e CMakeFiles/clean_test_results
+e810a627c2d8950389174e7345cbf0f4 beginner_tutorials/CMakeFiles/_beginner_tutorials_generate_messages_check_deps_AddTwoInts
+3124d4fdb9259df4ac27efc219ae823e beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_cpp
+3124d4fdb9259df4ac27efc219ae823e beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_eus
+3124d4fdb9259df4ac27efc219ae823e beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_lisp
+3124d4fdb9259df4ac27efc219ae823e beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_nodejs
+3124d4fdb9259df4ac27efc219ae823e beginner_tutorials/CMakeFiles/beginner_tutorials_generate_messages_py
+54b43202c25fd1eed95e3b628a69dba5 sound/CMakeFiles/sound_generate_messages_eus
 79b2a09e373043e06937147408f615e8 turtlebot/turtlebot_description/CMakeFiles/_run_tests_turtlebot_description_gtest_turtlebot_description_test_urdf
 d29b445881a78cb43ad4bfcb651a2ec9 turtlebot/turtlebot_description/CMakeFiles/clean_test_results_turtlebot_description
 79b2a09e373043e06937147408f615e8 turtlebot/turtlebot_description/CMakeFiles/run_tests_turtlebot_description_gtest_turtlebot_description_test_urdf
@@ -193,3 +209,4 @@ a774e7b837bfcbab15055181e30e1953 turtlebot_msgs/CMakeFiles/_turtlebot_msgs_gener
 9295d5ceff89ead7ddfbd3af959f7d0c turtlebot_msgs/CMakeFiles/turtlebot_msgs_generate_messages_lisp
 9295d5ceff89ead7ddfbd3af959f7d0c turtlebot_msgs/CMakeFiles/turtlebot_msgs_generate_messages_nodejs
 9295d5ceff89ead7ddfbd3af959f7d0c turtlebot_msgs/CMakeFiles/turtlebot_msgs_generate_messages_py
+892cb328f1eacb872e1430fd5bb9dadb xfei_asr/CMakeFiles/xfei_asr_generate_messages_eus
