@@ -10,6 +10,8 @@ from detect import detectFace
 from sound_play.msg import SoundRequest
 from sound_play.libsoundplay import SoundClient
 
+from geometry_msgs.msg import Twist
+
 def ImageCallback(msg):
     global bridge
     global sc

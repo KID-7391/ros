@@ -275,6 +275,9 @@ UBUNTU:BOOL=TRUE
 UBUNTU_XENIAL:BOOL=TRUE
 
 //Path to a file.
+_file_name:FILEPATH=/home/wen/rse/catkin_ws/src/opencv_apps/test/test-simple_compressed_example.test
+
+//Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
 
 //Path to a file.
@@ -352,6 +355,9 @@ create_node_DIR:PATH=/home/wen/rse/catkin_ws/devel/share/create_node/cmake
 //Value Computed by CMake
 create_node_SOURCE_DIR:STATIC=/home/wen/rse/catkin_ws/src/turtlebot_create/create_node
 
+//The directory containing a CMake configuration file for cv_brid.
+cv_brid_DIR:PATH=cv_brid_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for cv_bridge.
 cv_bridge_DIR:PATH=/opt/ros/kinetic/share/cv_bridge/cmake
 
@@ -375,6 +381,12 @@ face_count_BINARY_DIR:STATIC=/home/wen/rse/catkin_ws/build/face_count
 
 //Value Computed by CMake
 face_count_SOURCE_DIR:STATIC=/home/wen/rse/catkin_ws/src/face_count
+
+//Value Computed by CMake
+face_detection_BINARY_DIR:STATIC=/home/wen/rse/catkin_ws/build/face_detection
+
+//Value Computed by CMake
+face_detection_SOURCE_DIR:STATIC=/home/wen/rse/catkin_ws/src/face_detection
 
 //The directory containing a CMake configuration file for gazebo_msgs.
 gazebo_msgs_DIR:PATH=/opt/ros/kinetic/share/gazebo_msgs/cmake
@@ -476,6 +488,15 @@ nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
 
+//Value Computed by CMake
+opencv_apps_BINARY_DIR:STATIC=/home/wen/rse/catkin_ws/build/opencv_apps
+
+//Dependencies for the target
+opencv_apps_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libcv_bridge.so;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1;general;/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/kinetic/lib/libimage_transport.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libnodeletlib.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/kinetic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_viz;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_cvv;general;opencv_datasets;general;opencv_dpm;general;opencv_face;general;opencv_fuzzy;general;opencv_hdf;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
+
+//Value Computed by CMake
+opencv_apps_SOURCE_DIR:STATIC=/home/wen/rse/catkin_ws/src/opencv_apps
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 
@@ -512,6 +533,9 @@ rosgraph_DIR:PATH=/opt/ros/kinetic/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/kinetic/share/roslaunch/cmake
+
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
 
@@ -520,6 +544,9 @@ rospack_DIR:PATH=/opt/ros/kinetic/share/rospack/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
+
+//The directory containing a CMake configuration file for rostest.
+rostest_DIR:PATH=/opt/ros/kinetic/share/rostest/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
@@ -532,6 +559,9 @@ rqt_gui_py_DIR:PATH=/opt/ros/kinetic/share/rqt_gui_py/cmake
 
 //The directory containing a CMake configuration file for rqt_robot_dashboard.
 rqt_robot_dashboard_DIR:PATH=/opt/ros/kinetic/share/rqt_robot_dashboard/cmake
+
+//Dependencies for target
+seeta_facedet_lib_LIB_DEPENDS:STATIC=
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
@@ -853,7 +883,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=37
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=40
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
