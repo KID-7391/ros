@@ -2,4 +2,11 @@
 /openpose
 /rocon
 /catkin_ws_backup
+/drfi_cpp
+/hector_slam
+catkin_ws/src/salience/drfiModelCpp.data
+/catkin_ws/src/kamerider_image
+/catkin_ws/src/pocketsphinx
+/catkin_ws/src/turtlebot
+/catkin_ws/src/rbx1-indigo-devel
 catin_ws/build

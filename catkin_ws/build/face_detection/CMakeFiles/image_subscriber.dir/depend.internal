@@ -4,10 +4,10 @@
 face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o
  /home/wen/cv/face/SeetaFaceEngine/FaceDetection/include/common.h
  /home/wen/cv/face/SeetaFaceEngine/FaceDetection/include/face_detection.h
- /home/wen/rse/catkin_ws/devel/include/opencv_apps/Face.h
- /home/wen/rse/catkin_ws/devel/include/opencv_apps/FaceArray.h
- /home/wen/rse/catkin_ws/devel/include/opencv_apps/FaceArrayStamped.h
- /home/wen/rse/catkin_ws/devel/include/opencv_apps/Rect.h
+ /home/wen/rse/catkin_ws/devel/include/face_detection/Face.h
+ /home/wen/rse/catkin_ws/devel/include/face_detection/FaceArray.h
+ /home/wen/rse/catkin_ws/devel/include/face_detection/FaceArrayStamped.h
+ /home/wen/rse/catkin_ws/devel/include/face_detection/Rect.h
  /home/wen/rse/catkin_ws/src/face_detection/src/image_subscriber.cpp
  /opt/ros/kinetic/include/cv_bridge/cv_bridge.h
  /opt/ros/kinetic/include/image_transport/camera_publisher.h

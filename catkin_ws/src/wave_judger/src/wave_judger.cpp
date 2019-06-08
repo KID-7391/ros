@@ -45,8 +45,8 @@ void WaveJudger::IsWaving(const cv::Mat &img, bool is_waving[],
     IsWaving(kps, is_waving);
 }
 
-int WaveJudger::FindWaving(const cv::Mat &img, float bbox[][4],
-        std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>> &datum){
+int WaveJudger::FindWaving(const cv::Mat &img, float bbox[][4], bool swit, 
+    std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>> &datum){
     const auto height = img.rows;
     const auto width = img.cols;
     bool is_waving[100];
@@ -57,10 +57,11 @@ int WaveJudger::FindWaving(const cv::Mat &img, float bbox[][4],
 
     int cnt = 0;
     for(int person = 0; person < n_people; person++){
-        if(is_waving[person]){
+        if(swit || is_waving[person]){
             float x0 = width, y0 = height, x1 = 0, y1 = 0;
             for(int part = 0; part < n_parts; part++){
-                if(kps[{person, part, 2}] < 0.05)continue;
+                if(kps[{person, part, 2}] < 0.05 || part == 10 || part == 11
+                || part == 13 || part == 14 || (part >= 19 && part <= 24))continue;
                 x0 = std::min(kps[{person, part, 0}], x0);
                 x1 = std::max(kps[{person, part, 0}], x1);
                 y0 = std::min(kps[{person, part, 1}], y0);
@@ -76,15 +77,21 @@ int WaveJudger::FindWaving(const cv::Mat &img, float bbox[][4],
     return cnt;
 }
 
-void WaveJudger::vis(const cv::Mat &img){
+int WaveJudger::FindWaving(const cv::Mat &img, float bbox[][4], bool swit){
+    std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>> datum;
+    return FindWaving(img, bbox, swit, datum);
+}
+
+void WaveJudger::vis(const cv::Mat &img, bool swit){
     std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>> datum;
     float bbox[100][4];
-    int cnt = FindWaving(img, bbox, datum);
+    int cnt = FindWaving(img, bbox, swit, datum);
     auto im = datum->at(0)->cvOutputData;
     for(int i = 0; i < cnt; i++){
         int x0 = bbox[i][0], y0 = bbox[i][1], x1 = bbox[i][2], y1 = bbox[i][3];
         cv::rectangle(im, cvPoint(x0, y0), cvPoint(x1, y1), cv::Scalar(255,0,0));
     }
     cv::imshow("", im);
+    // if(cnt)cv::imwrite("res.jpg", im);
     // cv::waitKey(1);
 }

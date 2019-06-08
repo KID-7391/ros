@@ -4,9 +4,9 @@
 #include <cv_bridge/cv_bridge.h>
 
 #include "face_detection.h"
-#include "opencv_apps/Face.h"
-#include "opencv_apps/FaceArray.h"
-#include "opencv_apps/FaceArrayStamped.h"
+#include "face_detection/Face.h"
+#include "face_detection/FaceArray.h"
+#include "face_detection/FaceArrayStamped.h"
 
 seeta::FaceDetection *detector;
 ros::Publisher *msg_pub_;
@@ -25,11 +25,11 @@ void ImageCallback(const sensor_msgs::ImageConstPtr &msg){
         cv::Rect face_rect;
         int32_t num_face = static_cast<int32_t>(faces.size());
 
-        opencv_apps::FaceArrayStamped faces_msg;
+        face_detection::FaceArrayStamped faces_msg;
 
         for (int32_t i = 0; i < num_face; i++) {
 
-            opencv_apps::Face face_msg;
+            face_detection::Face face_msg;
             face_msg.face.x = faces[i].bbox.x;
             face_msg.face.y = faces[i].bbox.y;
             face_msg.face.width = faces[i].bbox.width;
@@ -62,7 +62,7 @@ int main(int argc, char **argv){
 
 
     msg_pub_ = new ros::Publisher;
-    *msg_pub_ = nh.advertise<opencv_apps::FaceArrayStamped>("faces", 1);
+    *msg_pub_ = nh.advertise<face_detection::FaceArrayStamped>("faces", 1);
 
     cv::namedWindow("");
     cv::startWindowThread();

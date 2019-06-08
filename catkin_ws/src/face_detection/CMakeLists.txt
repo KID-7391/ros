@@ -125,6 +125,7 @@ generate_messages(
 
 
 catkin_package(
+  CATKIN_DEPENDS message_runtime 
 #  INCLUDE_DIRS include
 #  LIBRARIES face_detection
 #  CATKIN_DEPENDS cv_bridge image_transport

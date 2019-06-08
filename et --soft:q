@@ -1,0 +1,103 @@
+[33mcommit 489426f4cba12f61e422b1e9e8f672c406a91893[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Jun 8 12:40:01 2019 +0800
+
+    ..
+
+[33mcommit 14277712235ac4ba3980322d7afda2561f5db6cf[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Jun 8 12:39:32 2019 +0800
+
+    ...
+
+[33mcommit c977cf23f8c9afee3572b546f279650008419ae7[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Jun 8 12:31:26 2019 +0800
+
+    ..
+
+[33mcommit ba83a48a6939a8240a2c169364448566e17e5600[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Jun 8 11:57:27 2019 +0800
+
+    update doc
+
+[33mcommit 40ca2c8ed493f5739be2808ebdf9762518d1ca71[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Jun 8 11:47:01 2019 +0800
+
+    update doc
+
+[33mcommit e6155f369270f291bbdc1b8ff120b4c2ff969551[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Jun 8 11:40:26 2019 +0800
+
+    updata doc
+
+[33mcommit a4d4cba3e2216c6459692417478d23458a2e4ce6[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Thu Apr 18 15:43:42 2019 +0800
+
+    follower with face_detection
+
+[33mcommit a09947c433b47091a94e3bd207d77ec7c2926217[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Apr 13 01:17:18 2019 +0800
+
+    implement face counter
+
+[33mcommit 2c9fc203ea955b2e97e0dadffc857d1a09bae6f9[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Fri Apr 12 23:54:40 2019 +0800
+
+    voice recognization and transform
+
+[33mcommit 31dcd7ec052128b3317a383cb7b407bfadf04658[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sun Mar 24 22:06:01 2019 +0800
+
+    update README
+
+[33mcommit 01921631b9a8dd830e67d70e9a3773c3b747a8b8[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sun Mar 24 22:05:01 2019 +0800
+
+    update README
+
+[33mcommit 91ffdc20cd8710ea77703e93427b2c09ea3cbd09[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sun Mar 24 22:02:50 2019 +0800
+
+    update README
+
+[33mcommit cd2118f2115b9d05dd60fbefeeae65ef014f3948[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sun Mar 24 21:37:52 2019 +0800
+
+    follower client
+    waving judger(part)
+
+[33mcommit 97e3df3d0aae1115af3ef75504f3cf00fffabe78[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Mar 9 14:54:19 2019 +0800
+
+    talker and listener
+
+[33mcommit f07c3d055f1a8f54231db08dadd5223ce58a1095[m
+Merge: 789db07 648d4b5
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Mar 9 13:27:00 2019 +0800
+
+    Merge branch 'master' of github.com:KID-7391/ros
+
+[33mcommit 789db07007f6c17631b765c80ddbee24821afb53[m
+Author: KID <1611450@mail.nankai.edu.cn>
+Date:   Sat Mar 9 13:24:46 2019 +0800
+
+    first commit
+
+[33mcommit 648d4b55f7b25f4a90493b7b20feea67b5d7a0e3[m
+Author: KID-7391 <36145366+KID-7391@users.noreply.github.com>
+Date:   Sat Mar 9 13:23:03 2019 +0800
+
+    Initial commit

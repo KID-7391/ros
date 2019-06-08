@@ -3,10 +3,10 @@
 
 face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/cv/face/SeetaFaceEngine/FaceDetection/include/common.h
 face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/cv/face/SeetaFaceEngine/FaceDetection/include/face_detection.h
-face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/devel/include/opencv_apps/Face.h
-face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/devel/include/opencv_apps/FaceArray.h
-face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/devel/include/opencv_apps/FaceArrayStamped.h
-face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/devel/include/opencv_apps/Rect.h
+face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/devel/include/face_detection/Face.h
+face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/devel/include/face_detection/FaceArray.h
+face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/devel/include/face_detection/FaceArrayStamped.h
+face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/devel/include/face_detection/Rect.h
 face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /home/wen/rse/catkin_ws/src/face_detection/src/image_subscriber.cpp
 face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /opt/ros/kinetic/include/cv_bridge/cv_bridge.h
 face_detection/CMakeFiles/image_subscriber.dir/src/image_subscriber.cpp.o: /opt/ros/kinetic/include/image_transport/camera_publisher.h

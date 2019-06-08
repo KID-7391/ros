@@ -1,0 +1,8 @@
+prefix=/home/wen/rse/catkin_ws/install
+
+Name: farewell_getbag
+Description: Description of farewell_getbag
+Version: 0.0.0
+Cflags: -I/home/wen/rse/catkin_ws/install/include
+Libs: -L/home/wen/rse/catkin_ws/install/lib 
+Requires: message_runtime

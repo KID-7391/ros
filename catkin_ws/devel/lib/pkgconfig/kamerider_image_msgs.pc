@@ -1,0 +1,8 @@
+prefix=/home/wen/rse/catkin_ws/devel
+
+Name: kamerider_image_msgs
+Description: Description of kamerider_image_msgs
+Version: 0.0.0
+Cflags: -I/home/wen/rse/catkin_ws/devel/include
+Libs: -L/home/wen/rse/catkin_ws/devel/lib 
+Requires: actionlib_msgs geometry_msgs sensor_msgs message_runtime std_msgs

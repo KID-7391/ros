@@ -1,0 +1,5 @@
+<launch>
+    <!-- Turtlesim Node--> 
+    <node name="publisher" pkg="wave_judger" type="image_publisher.bin" respawn="false" output="screen" />
+    <node name="subscriber" pkg="wave_judger" type="image_subscriber.bin" respawn="false" output="screen" />
+</launch>

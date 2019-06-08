@@ -1,0 +1,8 @@
+prefix=/home/wen/rse/catkin_ws/install
+
+Name: data_wrapper
+Description: Description of data_wrapper
+Version: 0.0.0
+Cflags: -I/home/wen/rse/catkin_ws/install/include
+Libs: -L/home/wen/rse/catkin_ws/install/lib 
+Requires: nav_msgs roscpp rospy sensor_msgs std_msgs message_runtime

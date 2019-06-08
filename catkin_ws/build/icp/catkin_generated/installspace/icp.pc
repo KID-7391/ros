@@ -1,0 +1,8 @@
+prefix=/home/wen/rse/catkin_ws/install
+
+Name: icp
+Description: Description of icp
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wen/rse/catkin_ws/install/lib 
+Requires: 

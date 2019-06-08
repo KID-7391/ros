@@ -8,6 +8,26 @@
 #add_executable(fuck.bin ${CMAKE_CURRENT_SOURCE_DIR}/fuck.cpp ${ALL_FILES})
 #target_link_libraries(fuck.bin openpose ${examples_3rdparty_libraries})# ${catkin_LIBRARIES})
 
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  cv_bridge
+  image_transport
+  std_msgs
+  message_generation
+)
+
+
+add_message_files(
+   FILES
+   Rect.msg
+   RectArray.msg
+)
+generate_messages(
+  DEPENDENCIES
+  sensor_msgs
+  std_msgs
+)
+
 set(SOURCE_FILES
     src/utils.cpp
     src/wave_judger.cpp
@@ -16,20 +36,16 @@ set(FILES
     src/image_publisher.cpp
     src/image_subscriber.cpp
 )
-find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  cv_bridge
-  image_transport
-)
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
 )
-SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY /home/wen/rse/catkin_ws/src/wave_judger/bin)
 foreach(FILE ${FILES})
   get_filename_component(SOURCE_NAME ${FILE} NAME_WE)
   set(EXE_NAME "${SOURCE_NAME}.bin")
   message(STATUS "Adding Example ${EXE_NAME}")
+  SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
   add_executable(${EXE_NAME} ${SOURCE_FILES} ${FILE})
-  target_link_libraries(${EXE_NAME} openpose ${examples_3rdparty_libraries} ${catkin_LIBRARIES})
+  target_link_libraries(${EXE_NAME} openpose ${examples_3rdparty_libraries} ${catkin_LIBRARIES} ${DEPENDENCIES})
 endforeach()

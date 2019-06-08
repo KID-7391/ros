@@ -1,23 +1,24 @@
 #include <iostream>
 #include "ros/ros.h"
-#include "std_msgs/Float32.h"
-#include "geometry_msgs/Twist.h"
-#include "sensor_msgs/LaserScan.h"
+#include "std_msgs/String.h"
+#include <sstream>
+
 using namespace std;
-void chatterCallback(const sensor_msgs::LaserScan::ConstPtr& msg){
-    ROS_INFO("%.f", (msg->header).stamp.toSec());
-}
+// void chatterCallback(const sensor_msgs::LaserScan::ConstPtr& msg){
+//     ROS_INFO("%.f", (msg->header).stamp.toSec());
+// }
 int main(int argc, char **argv){
     ros::init(argc,argv,"pub");
     ros::NodeHandle n;
-    ros::Publisher chatter_pub=n.advertise<geometry_msgs::Twist>("ctrl_cmd_vel",1000);
-    ros::Subscriber sub=n.subscribe("/original/scan",1000,chatterCallback);
-    geometry_msgs::Twist msg;
-    msg.angular.z=0.1;
+    ros::Publisher pub=n.advertise<std_msgs::String>("test", 1000);
     ros::Rate loop_rate(10);
+    int i = 0;
     while (ros::ok()){
-        ROS_INFO("%.3f",msg.angular.z);
-        chatter_pub.publish(msg);
+        std_msgs::String msg;
+        std::stringstream ss;
+        ss << i++;
+        msg.data = ss.str();
+        pub.publish(msg);
         ros::spinOnce();
         loop_rate.sleep();
     }

@@ -20,7 +20,7 @@ vector
 common.h
 /home/wen/cv/face/SeetaFaceEngine/FaceDetection/include/common.h
 
-/home/wen/rse/catkin_ws/devel/include/opencv_apps/Face.h
+/home/wen/rse/catkin_ws/devel/include/face_detection/Face.h
 string
 -
 vector
@@ -35,12 +35,12 @@ ros/builtin_message_traits.h
 -
 ros/message_operations.h
 -
-opencv_apps/Rect.h
+face_detection/Rect.h
 -
-opencv_apps/Rect.h
+face_detection/Rect.h
 -
 
-/home/wen/rse/catkin_ws/devel/include/opencv_apps/FaceArray.h
+/home/wen/rse/catkin_ws/devel/include/face_detection/FaceArray.h
 string
 -
 vector
@@ -55,10 +55,10 @@ ros/builtin_message_traits.h
 -
 ros/message_operations.h
 -
-opencv_apps/Face.h
+face_detection/Face.h
 -
 
-/home/wen/rse/catkin_ws/devel/include/opencv_apps/FaceArrayStamped.h
+/home/wen/rse/catkin_ws/devel/include/face_detection/FaceArrayStamped.h
 string
 -
 vector
@@ -75,10 +75,10 @@ ros/message_operations.h
 -
 std_msgs/Header.h
 -
-opencv_apps/Face.h
+face_detection/Face.h
 -
 
-/home/wen/rse/catkin_ws/devel/include/opencv_apps/Rect.h
+/home/wen/rse/catkin_ws/devel/include/face_detection/Rect.h
 string
 -
 vector
@@ -105,12 +105,12 @@ cv_bridge/cv_bridge.h
 -
 face_detection.h
 /home/wen/rse/catkin_ws/src/face_detection/src/face_detection.h
-opencv_apps/Face.h
-/home/wen/rse/catkin_ws/src/face_detection/src/opencv_apps/Face.h
-opencv_apps/FaceArray.h
-/home/wen/rse/catkin_ws/src/face_detection/src/opencv_apps/FaceArray.h
-opencv_apps/FaceArrayStamped.h
-/home/wen/rse/catkin_ws/src/face_detection/src/opencv_apps/FaceArrayStamped.h
+face_detection/Face.h
+/home/wen/rse/catkin_ws/src/face_detection/src/face_detection/Face.h
+face_detection/FaceArray.h
+/home/wen/rse/catkin_ws/src/face_detection/src/face_detection/FaceArray.h
+face_detection/FaceArrayStamped.h
+/home/wen/rse/catkin_ws/src/face_detection/src/face_detection/FaceArrayStamped.h
 
 /opt/ros/kinetic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h

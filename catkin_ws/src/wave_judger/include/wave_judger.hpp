@@ -11,8 +11,9 @@ public:
     void init();
     void IsWaving(const cv::Mat &img, bool is_waving[], 
         std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>> &datum);
-    int FindWaving(const cv::Mat &img, float bbox[][4],
+    int FindWaving(const cv::Mat &img, float bbox[][4], bool swit,
         std::shared_ptr<std::vector<std::shared_ptr<op::Datum>>> &datum);
-    void vis(const cv::Mat &img);
+    int FindWaving(const cv::Mat &img, float bbox[][4], bool swit);
+    void vis(const cv::Mat &img, bool swit);
 };
 #endif //WAVE_JUDGER_HPP
